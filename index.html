@@ -39,98 +39,114 @@
     </section>
 
     <!-- Product Grid -->
-    <section id="templates" class="max-w-6xl mx-auto w-full px-6 py-12 grid md:grid-cols-3 gap-8">
+<!-- MAIN PRODUCT SECTION -->
+    <section id="templates" class="max-w-5xl mx-auto w-full px-6 py-12 space-y-12">
         
-        <!-- Product 1: Weekly Task Tracker -->
-        <div class="bg-[#111827] border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/30 transition duration-300">
-            <div>
-                <span class="text-xs font-mono text-cyan-400">01 // PRODUCTIVITY</span>
-                <h3 class="text-xl font-bold text-white mt-2">Weekly Task Tracker</h3>
-                
-                <!-- Изображение Weekly Planner -->
-                <div class="mt-4 mb-4 overflow-hidden rounded-xl border border-gray-800 bg-[#0B0F19]">
-                    <img src="img/tasks.png" alt="Weekly Task Tracker Preview" class="w-full h-auto hover:scale-105 transition duration-300 object-cover">
-                </div>
-
-                <p class="text-gray-400 text-sm mt-2 leading-relaxed">
-                    A clean sprint-based dashboard to manage daily habits and complete study or coding sprints without anxiety.
-                </p>
-                <ul class="text-xs text-gray-400 mt-6 space-y-2.5 font-mono">
-                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Interactive sprint chart</li>
-                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Automatic habit completion rates</li>
-                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Google Sheets / Excel ready</li>
-                </ul>
-            </div>
-            <div class="mt-8">
-                <div class="text-2xl font-bold text-white mb-4">$5.90</div>
-                <!-- ВСТАВЬ СВОЮ ССЫЛКУ TRIBUTE 1 НИЖЕ В HREF -->
-                <a href="ССЫЛКА_TRIBUTE_1" class="block text-center bg-gray-800 hover:bg-gray-700 text-white font-medium py-2.5 rounded-xl text-sm transition duration-200">
-                    Buy Now
-                </a>
-            </div>
-        </div>
-
-        <!-- Product 2: Financial Dashboard (The Main Sheet) -->
-        <div class="bg-[#111827] border-2 border-emerald-500 rounded-2xl p-6 flex flex-col justify-between relative transform md:-translate-y-2 shadow-xl shadow-emerald-500/5 hover:border-emerald-400 transition duration-300">
-            <span class="absolute -top-3.5 right-6 bg-emerald-500 text-[#0B0F19] text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                Most Popular
+        <!-- 1. FEATURED BUNDLE BANNER (ОБЩИЙ ПАКЕТ 3-в-1) -->
+        <div class="bg-gradient-to-r from-[#111827] to-[#1F2937] border-2 border-emerald-500 rounded-3xl p-8 md:p-10 relative overflow-hidden shadow-2xl shadow-emerald-500/5 hover:border-emerald-400 transition duration-300">
+            <span class="absolute top-4 right-6 bg-emerald-500 text-[#0B0F19] text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                Ultimate Deal // 50% OFF
             </span>
-            <div>
-                <span class="text-xs font-mono text-emerald-400">02 // INCOME MANAGER</span>
-                <h3 class="text-xl font-bold text-white mt-2">Personal Finance 2026</h3>
-                
-                <!-- Изображение Personal Finance -->
-                <div class="mt-4 mb-4 overflow-hidden rounded-xl border border-gray-800 bg-[#0B0F19]">
-                    <img src="img/finance.png" alt="Personal Finance Dashboard Preview" class="w-full h-auto hover:scale-105 transition duration-300 object-cover">
-                </div>
-
-                <p class="text-gray-300 text-sm mt-2 leading-relaxed font-medium">
-                    Ultimate money tracking engine. Beautiful category analysis, automatic goal meters, and bill calendars.
+            
+            <div class="max-w-2xl">
+                <span class="text-xs font-mono text-emerald-400">03 // THE ECLIPSE BUNDLE</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-2">Complete Life Control (3-in-1 Pack)</h2>
+                <p class="text-gray-300 text-sm md:text-base mt-4 leading-relaxed">
+                    Get the Financial Dashboard, Habit Tracker, and Weekly Planner combined into one synced terminal. The complete productivity engine designed to cure your budget and organization anxiety.
                 </p>
-                <ul class="text-xs text-gray-300 mt-6 space-y-2.5 font-mono">
-                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Visual Category breakdown</li>
-                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Dynamic Goal & Savings limits</li>
-                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Quick Transaction logs</li>
+                <ul class="text-xs md:text-sm text-gray-400 mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2.5 font-mono">
+                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Personal Finance 2026 ($14.90 value)</li>
+                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Habit Tracker ($9.90 value)</li>
+                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Weekly Task Tracker ($5.90 value)</li>
+                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Lifetime updates & system guides</li>
                 </ul>
             </div>
-            <div class="mt-8">
-                <div class="text-2xl font-bold text-white mb-4">$14.90</div>
-                <!-- ВСТАВЬ СВОЮ ССЫЛКУ TRIBUTE 2 НИЖЕ В HREF -->
-                <a href="ССЫЛКА_TRIBUTE_2" class="block text-center bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-2.5 rounded-xl text-sm transition duration-200">
-                    Get Access
+
+            <!-- Price & Button (Responsive) -->
+            <div class="mt-8 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
+                <div>
+                    <div class="text-sm font-mono text-gray-500 line-through">$30.70</div>
+                    <div class="text-3xl font-extrabold text-white">$19.90</div>
+                </div>
+                <!-- ВСТАВЬ ССЫЛКУ TRIBUTE НА БАНДЛ В HREF -->
+                <a href="ССЫЛКА_TRIBUTE_ОБЩИЙ_БАНДЛ" class="w-full sm:w-auto text-center bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl text-base transition duration-200">
+                    Get 3-in-1 Ecosystem
                 </a>
             </div>
         </div>
 
-        <!-- Product 3: Bundle 3-in-1 -->
-        <div class="bg-[#111827] border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/30 transition duration-300">
-            <div>
-                <span class="text-xs font-mono text-purple-400">03 // THE ECLIPSE BUNDLE</span>
-                <h3 class="text-xl font-bold text-white mt-2">Complete Life Control</h3>
-                
-                <!-- Изображение Control Panel -->
-                <div class="mt-4 mb-4 overflow-hidden rounded-xl border border-gray-800 bg-[#0B0F19]">
-                    <img src="img/habits.png" alt="Ecosystem Control Panel Preview" class="w-full h-auto hover:scale-105 transition duration-300 object-cover">
-                </div>
+        <!-- 2. INDIVIDUAL PRODUCTS GRID (ОТДЕЛЬНЫЕ КАРТОЧКИ) -->
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <!-- Card 1: Weekly Task Tracker -->
+            <div class="bg-[#111827] border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/20 transition duration-300">
+                <div>
+                    <span class="text-xs font-mono text-cyan-400">01 // BASIC PLANNER</span>
+                    <h3 class="text-lg font-bold text-white mt-1">Weekly Task Tracker</h3>
+                    
+                    <div class="mt-4 mb-4 overflow-hidden rounded-xl border border-gray-800 bg-[#0B0F19]">
+                        <img src="img/tasks.png" alt="Weekly Task Tracker" class="w-full h-auto hover:scale-105 transition duration-300 object-cover">
+                    </div>
 
-                <p class="text-gray-400 text-sm mt-2 leading-relaxed">
-                    Get the Financial Dashboard, Habit Tracker, and Weekly Planner combined into one synced terminal.
-                </p>
-                <ul class="text-xs text-gray-400 mt-6 space-y-2.5 font-mono">
-                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> All 3 dashboards included</li>
-                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Connected system guides</li>
-                    <li class="flex items-center"><span class="text-emerald-500 mr-2">[✓]</span> Lifetime updates & support</li>
-                </ul>
-            </div>
-            <div class="mt-8">
-                <div class="text-2xl font-bold text-white mb-4">
-                    $19.90 <span class="text-xs text-gray-500 line-through font-normal ml-1">$40.70</span>
+                    <p class="text-gray-400 text-xs mt-2 leading-relaxed">
+                        A clean sprint-based dashboard to manage daily habits and complete study or coding sprints.
+                    </p>
                 </div>
-                <!-- ВСТАВЬ СВОЮ ССЫЛКУ TRIBUTE 3 НИЖЕ В HREF -->
-                <a href="ССЫЛКА_TRIBUTE_3" class="block text-center bg-gray-800 hover:bg-gray-700 text-white font-medium py-2.5 rounded-xl text-sm transition duration-200">
-                    Buy Ecosystem
-                </a>
+                <div class="mt-6">
+                    <div class="text-xl font-bold text-white mb-3">$5.90</div>
+                    <!-- ВСТАВЬ ССЫЛКУ TRIBUTE НА ЗАДАЧИ В HREF -->
+                    <a href="ССЫЛКА_TRIBUTE_ЗАДАЧИ" class="block text-center bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 rounded-lg text-xs transition duration-200">
+                        Buy Standalone
+                    </a>
+                </div>
             </div>
+
+            <!-- Card 2: Habit Tracker -->
+            <div class="bg-[#111827] border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/20 transition duration-300">
+                <div>
+                    <span class="text-xs font-mono text-purple-400">02 // ROUTINE REFACTOR</span>
+                    <h3 class="text-lg font-bold text-white mt-1">Habit Tracker</h3>
+                    
+                    <div class="mt-4 mb-4 overflow-hidden rounded-xl border border-gray-800 bg-[#0B0F19]">
+                        <img src="img/habits.png" alt="Habit Tracker" class="w-full h-auto hover:scale-105 transition duration-300 object-cover">
+                    </div>
+
+                    <p class="text-gray-400 text-xs mt-2 leading-relaxed">
+                        Advanced habit builder with monthly completion charts, streaks, and overall routine progress.
+                    </p>
+                </div>
+                <div class="mt-6">
+                    <div class="text-xl font-bold text-white mb-3">$9.90</div>
+                    <!-- ВСТАВЬ ССЫЛКУ TRIBUTE НА ПРИВЫЧКИ В HREF -->
+                    <a href="ССЫЛКА_TRIBUTE_ПРИВЫЧКИ" class="block text-center bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 rounded-lg text-xs transition duration-200">
+                        Buy Standalone
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: Personal Finance 2026 -->
+            <div class="bg-[#111827] border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/20 transition duration-300">
+                <div>
+                    <span class="text-xs font-mono text-emerald-400">03 // FINANCE ENGINE</span>
+                    <h3 class="text-lg font-bold text-white mt-1">Personal Finance 2026</h3>
+                    
+                    <div class="mt-4 mb-4 overflow-hidden rounded-xl border border-gray-800 bg-[#0B0F19]">
+                        <img src="img/finance.png" alt="Personal Finance Dashboard" class="w-full h-auto hover:scale-105 transition duration-300 object-cover">
+                    </div>
+
+                    <p class="text-gray-400 text-xs mt-2 leading-relaxed">
+                        Ultimate money tracking engine. Beautiful category analysis, automatic goal meters, and bill calendars.
+                    </p>
+                </div>
+                <div class="mt-6">
+                    <div class="text-xl font-bold text-white mb-3">$14.90</div>
+                    <!-- ВСТАВЬ ССЫЛКУ TRIBUTE НА ФИНАНСЫ В HREF -->
+                    <a href="ССЫЛКА_TRIBUTE_ФИНАНСЫ" class="block text-center bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 rounded-lg text-xs transition duration-200">
+                        Buy Standalone
+                    </a>
+                </div>
+            </div>
+
         </div>
 
     </section>
