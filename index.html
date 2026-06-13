@@ -16,7 +16,7 @@
 <body class="bg-[#0B0F19] text-gray-200 font-sans antialiased min-h-screen flex flex-col justify-between">
 
     <!-- Header -->
-    <header class="max-w-5xl mx-auto w-full px-6 py-8 flex justify-between items-center border-b border-gray-800/60">
+    <header class="max-w-6xl mx-auto w-full px-6 py-8 flex justify-between items-center border-b border-gray-800/60">
         <div class="flex items-center space-x-3">
             <div class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></div>
             <span class="font-mono font-bold text-lg tracking-wider text-white">SOPHIE_EVANS // SYS</span>
@@ -40,10 +40,10 @@
         </p>
     </section>
 
-    <!-- MAIN PRODUCT SECTION -->
-    <section id="templates" class="max-w-5xl mx-auto w-full px-6 py-12 space-y-12">
+    <!-- MAIN PRODUCT SECTION (Ширина увеличена до max-w-6xl) -->
+    <section id="templates" class="max-w-6xl mx-auto w-full px-6 py-12 space-y-12">
         
-        <!-- 1. FEATURED BUNDLE BANNER (ОБЩИЙ ПАКЕТ 3-в-1 С КАРТИНКОЙ) -->
+        <!-- 1. FEATURED BUNDLE BANNER (ОБЩИЙ ПАКЕТ 3-в-1 С КАРТИНКОЙ 50/50) -->
         <div class="bg-gradient-to-r from-[#111827] to-[#1F2937] border-2 border-emerald-500 rounded-3xl p-8 md:p-10 relative overflow-hidden shadow-2xl shadow-emerald-500/5 hover:border-emerald-400 transition duration-300">
             <span class="absolute top-4 right-6 bg-emerald-500 text-[#0B0F19] text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                 SAVE 50% // ECLIPSE BUNDLE
@@ -51,8 +51,8 @@
             
             <div class="grid md:grid-cols-12 gap-8 items-center">
                 
-                <!-- Левая колонка: Текст -->
-                <div class="md:col-span-7 space-y-4">
+                <!-- Левая колонка: Текст (занимает 6 колонок из 12) -->
+                <div class="md:col-span-6 space-y-4">
                     <span class="text-xs font-mono text-emerald-400">03 // THE COMPLETE ECOSYSTEM</span>
                     <h2 class="text-2xl md:text-3xl font-extrabold text-white leading-tight">The 3-in-1 Life Control Terminal</h2>
                     <p class="text-gray-300 text-sm leading-relaxed">
@@ -66,9 +66,9 @@
                     </ul>
                 </div>
 
-                <!-- Правая колонка: Изображение -->
-                <div class="hidden md:block md:col-span-5 overflow-hidden rounded-2xl border border-gray-800 bg-[#0B0F19]/50 shadow-inner">
-                    <img src="img/finance-1.png" alt="Complete 3-in-1 Bundle Preview" class="w-full h-auto hover:scale-105 transition duration-300 object-cover">
+                <!-- Правая колонка: Изображение (занимает 6 колонок из 12) -->
+                <div class="hidden md:block md:col-span-6 overflow-hidden rounded-2xl border border-gray-800 bg-[#0B0F19]/50 shadow-inner">
+                    <img src="img/finance-1.png" alt="Complete 3-in-1 Bundle Preview" onclick="openModal(this.src)" class="w-full h-auto hover:scale-110 transition duration-300 object-cover cursor-zoom-in">
                 </div>
 
             </div>
@@ -96,7 +96,7 @@
                     <h3 class="text-lg font-bold text-white mt-1">Weekly Task Tracker</h3>
                     
                     <div class="mt-4 mb-4 overflow-hidden rounded-xl border border-gray-800 bg-[#0B0F19]">
-                        <img src="img/tasks.png" alt="Weekly Task Tracker" class="w-full h-auto hover:scale-105 transition duration-300 object-cover">
+                        <img src="img/tasks.png" alt="Weekly Task Tracker" onclick="openModal(this.src)" class="w-full h-auto hover:scale-110 transition duration-300 object-cover cursor-zoom-in">
                     </div>
 
                     <p class="text-gray-400 text-xs mt-2 leading-relaxed">
@@ -121,7 +121,7 @@
                     <!-- Интерактивная галерея привычек -->
                     <div class="mt-4 mb-4">
                         <div class="overflow-hidden rounded-xl border border-gray-800 bg-[#0B0F19]">
-                            <img id="habits-preview" src="img/habits-1.png" alt="Habit Tracker" class="w-full h-auto object-cover transition-all duration-200">
+                            <img id="habits-preview" src="img/habits-1.png" alt="Habit Tracker" onclick="openModal(this.src)" class="w-full h-auto object-cover transition-all duration-200 cursor-zoom-in hover:scale-110">
                         </div>
                         <div class="flex space-x-2 mt-2">
                             <button onclick="document.getElementById('habits-preview').src='img/habits-1.png'" class="flex-1 text-[10px] font-mono bg-gray-800 hover:bg-gray-700 text-gray-300 py-1 rounded border border-gray-700 focus:border-emerald-500 focus:text-white transition">
@@ -155,7 +155,7 @@
                     <!-- Интерактивная галерея финансов -->
                     <div class="mt-4 mb-4">
                         <div class="overflow-hidden rounded-xl border border-gray-800 bg-[#0B0F19]">
-                            <img id="finance-preview" src="img/finance-1.png" alt="Personal Finance" class="w-full h-auto object-cover transition-all duration-200">
+                            <img id="finance-preview" src="img/finance-1.png" alt="Personal Finance" onclick="openModal(this.src)" class="w-full h-auto object-cover transition-all duration-200 cursor-zoom-in hover:scale-110">
                         </div>
                         <div class="flex space-x-2 mt-2">
                             <button onclick="document.getElementById('finance-preview').src='img/finance-1.png'" class="flex-1 text-[10px] font-mono bg-gray-800 hover:bg-gray-700 text-gray-300 py-1 rounded border border-gray-700 focus:border-emerald-500 focus:text-white transition">
@@ -185,7 +185,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="max-w-4xl mx-auto px-6 py-16 border-t border-gray-850">
+    <section class="max-w-4xl mx-auto px-6 py-16 border-t border-gray-800/60">
         <h2 class="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
         <div class="space-y-6">
             <div class="bg-[#111827] p-5 rounded-2xl border border-gray-800">
@@ -204,13 +204,38 @@
     </section>
 
     <!-- Footer -->
-    <footer class="max-w-5xl mx-auto w-full px-6 py-12 text-center text-xs text-gray-600 border-t border-gray-900 font-mono flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+    <footer class="max-w-6xl mx-auto w-full px-6 py-12 text-center text-xs text-gray-600 border-t border-gray-900 font-mono flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         <span>SYSTEM RESOLVED // DESIGNED BY SOPHIE // © 2026</span>
         <div class="flex space-x-6">
             <span class="text-gray-500 hover:text-gray-400">STATUS: STABLE</span>
             <span class="text-gray-500 hover:text-gray-400">LATENCY: 12MS</span>
         </div>
     </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ УВЕЛИЧЕНИЯ КАРТИНОК (ПОЛНОЭКРАННЫЙ ЗУМ) -->
+    <div id="image-modal" class="fixed inset-0 bg-[#0B0F19]/95 z-50 hidden flex items-center justify-center p-4 md:p-10 cursor-zoom-out" onclick="closeModal()">
+        <img id="modal-img" src="" class="max-w-full max-h-full rounded-2xl border border-gray-800 shadow-2xl object-contain">
+        <!-- Кнопка закрытия (крестик) -->
+        <button class="absolute top-6 right-6 text-gray-500 hover:text-white text-4xl font-bold font-mono transition">&times;</button>
+    </div>
+
+    <!-- СКРИПТ УПРАВЛЕНИЯ МОДАЛЬНЫМ ОКНОМ -->
+    <script>
+        function openModal(imgSrc) {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            modalImg.src = imgSrc;
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden'); // Запрет прокрутки страницы под модалкой
+        }
+
+        // Закрытие при клике в любое место
+        function closeModal() {
+            const modal = document.getElementById('image-modal');
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden'); // Разрешение прокрутки
+        }
+    </script>
 
 </body>
 </html>
