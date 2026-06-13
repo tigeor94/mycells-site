@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
+        <!-- Vercel Web Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sophie's Systems — Premium Excel & Google Sheets Templates</title>
-    <!-- Авто-фавикон (эмодзи) -->
+
     <link rel="icon" href="https://fav.farm/🪐" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -40,10 +45,9 @@
         </p>
     </section>
 
-    <!-- MAIN PRODUCT SECTION (Ширина max-w-7xl) -->
+    <!-- MAIN PRODUCT SECTION  -->
     <section id="templates" class="max-w-7xl mx-auto w-full px-6 py-12 space-y-12">
         
-        <!-- 1. FEATURED BUNDLE BANNER (ОБЩИЙ ПАКЕТ 3-в-1 С АДАПТИВНЫМ 3D ВЕЕРОМ) -->
         <div class="bg-gradient-to-r from-[#111827] to-[#1F2937] border-2 border-emerald-500 rounded-3xl p-8 md:p-10 relative overflow-hidden shadow-2xl shadow-emerald-500/5 hover:border-emerald-400 transition duration-300">
             <span class="absolute top-4 right-6 bg-emerald-500 text-[#0B0F19] text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                 SAVE 50% // ECLIPSE BUNDLE
@@ -51,7 +55,6 @@
             
             <div class="grid md:grid-cols-12 gap-8 items-center">
                 
-                <!-- Левая колонка: Текст (6 из 12) -->
                 <div class="md:col-span-6 space-y-4">
                     <span class="text-xs font-mono text-emerald-400">03 // THE COMPLETE ECOSYSTEM</span>
                     <h2 class="text-2xl md:text-3xl font-extrabold text-white leading-tight">The 3-in-1 Life Control Terminal</h2>
@@ -66,34 +69,28 @@
                     </ul>
                 </div>
 
-                <!-- Правая колонка: АДАПТИВНЫЙ 3D КОЛЛАЖ (Теперь отображается везде, масштабируется под мобильные) -->
                 <div class="md:col-span-6 relative w-full h-[180px] sm:h-[260px] md:h-[320px] mt-8 md:mt-0 overflow-visible select-none">
-                    <!-- Задний левый: Задачи -->
                     <img src="img/tasks.png" alt="Weekly Task Tracker" onclick="openModal(this.src)" class="absolute w-[65%] left-0 top-6 md:top-12 -rotate-6 rounded-xl border border-gray-800 shadow-xl opacity-50 hover:opacity-100 hover:z-30 hover:rotate-0 hover:scale-105 hover:border-cyan-500 transition duration-300 cursor-zoom-in z-10">
                     
-                    <!-- Задний правый: Привычки -->
                     <img src="img/habits-1.png" alt="Habit Tracker" onclick="openModal(this.src)" class="absolute w-[65%] right-0 top-10 md:top-16 rotate-6 rounded-xl border border-gray-800 shadow-xl opacity-50 hover:opacity-100 hover:z-30 hover:rotate-0 hover:scale-105 hover:border-purple-500 transition duration-300 cursor-zoom-in z-10">
                     
-                    <!-- Передний центр: Финансы -->
                     <img src="img/finance-1.png" alt="Personal Finance" onclick="openModal(this.src)" class="absolute w-[72%] left-[14%] top-1 md:top-2 shadow-2xl rounded-xl border border-emerald-500 hover:scale-110 hover:z-30 transition duration-300 cursor-zoom-in z-20">
                 </div>
 
             </div>
 
-            <!-- Нижняя панель: Цена и Кнопка -->
             <div class="mt-8 pt-6 border-t border-gray-800/80 flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
                 <div>
                     <div class="text-sm font-mono text-gray-500 line-through">$30.70 VALUE</div>
                     <div class="text-3xl font-extrabold text-white">$19.90 <span class="text-sm font-normal text-gray-400">one-time</span></div>
                 </div>
-                <!-- ВСТАВЛЕНА ССЫЛКА НА БАНДЛ ИЗ 3 ТРЕКЕРОВ -->
                 <a href="https://app.lava.top/en/products/2fc99083-f3ff-4c54-9579-18a20c14e77a?currency=USD" class="w-full sm:w-auto text-center bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl text-base transition duration-200">
                     Compile My Life ($19.90)
                 </a>
             </div>
         </div>
 
-        <!-- 2. INDIVIDUAL PRODUCTS GRID (ОТДЕЛЬНЫЕ КАРТОЧКИ) -->
+        <!-- 2. INDIVIDUAL PRODUCTS GRID -->
         <div class="grid md:grid-cols-3 gap-8">
             
             <!-- Card 1: Weekly Task Tracker -->
@@ -112,7 +109,6 @@
                 </div>
                 <div class="mt-6">
                     <div class="text-xl font-bold text-white mb-3">$5.90</div>
-                    <!-- ВСТАВЛЕНА ССЫЛКА НА ЗАДАЧИ -->
                     <a href="https://app.lava.top/en/products/d1c50fdf-ffde-4b45-b034-4d77f094b2ee?currency=USD" class="block text-center bg-gray-800 hover:bg-gray-700 text-white font-medium py-2.5 rounded-xl text-xs transition duration-200">
                         Initialize Sprints ($5.90)
                     </a>
@@ -125,7 +121,6 @@
                     <span class="text-xs font-mono text-purple-400">02 // ROUTINE REFACTOR</span>
                     <h3 class="text-lg font-bold text-white mt-1">Habit Tracker</h3>
                     
-                    <!-- Интерактивная галерея привычек -->
                     <div class="mt-4 mb-4">
                         <div class="overflow-hidden rounded-xl border border-gray-800 bg-[#0B0F19]">
                             <img id="habits-preview" src="img/habits-1.png" alt="Habit Tracker" onclick="openModal(this.src)" class="w-full h-auto object-cover transition-all duration-200 cursor-zoom-in hover:scale-110">
@@ -146,7 +141,6 @@
                 </div>
                 <div class="mt-6">
                     <div class="text-xl font-bold text-white mb-3">$9.90</div>
-                    <!-- ВСТАВЛЕНА ССЫЛКА НА ПРИВЫЧКИ -->
                     <a href="https://app.lava.top/en/products/2d186091-cee7-4c7e-aa04-b6c77498aab7?currency=USD" class="block text-center bg-gray-800 hover:bg-gray-700 text-white font-medium py-2.5 rounded-xl text-xs transition duration-200">
                         Deploy Habits ($9.90)
                     </a>
@@ -159,7 +153,6 @@
                     <span class="text-xs font-mono text-emerald-400">03 // FINANCE COMPILER</span>
                     <h3 class="text-lg font-bold text-white mt-1">Personal Finance 2026</h3>
                     
-                    <!-- Интерактивная галерея финансов -->
                     <div class="mt-4 mb-4">
                         <div class="overflow-hidden rounded-xl border border-gray-800 bg-[#0B0F19]">
                             <img id="finance-preview" src="img/finance-1.png" alt="Personal Finance" onclick="openModal(this.src)" class="w-full h-auto object-cover transition-all duration-200 cursor-zoom-in hover:scale-110">
@@ -180,7 +173,6 @@
                 </div>
                 <div class="mt-6">
                     <div class="text-xl font-bold text-white mb-3">$14.90</div>
-                    <!-- ВСТАВЛЕНА ССЫЛКА НА ФИНАНСЫ -->
                     <a href="https://app.lava.top/en/products/170f3a4d-66ce-4a57-8e38-d74fd370f68e?currency=USD" class="block text-center bg-gray-800 hover:bg-gray-700 text-white font-medium py-2.5 rounded-xl text-xs transition duration-200">
                         Audit Finances ($14.90)
                     </a>
@@ -219,14 +211,12 @@
         </div>
     </footer>
 
-    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ УВЕЛИЧЕНИЯ КАРТИНОК (ПОЛНОЭКРАННЫЙ ЗУМ) -->
     <div id="image-modal" class="fixed inset-0 bg-[#0B0F19]/95 z-50 hidden flex items-center justify-center p-4 md:p-10 cursor-zoom-out" onclick="closeModal()">
         <img id="modal-img" src="" class="max-w-full max-h-full rounded-2xl border border-gray-800 shadow-2xl object-contain">
         <!-- Кнопка закрытия (крестик) -->
         <button class="absolute top-6 right-6 text-gray-500 hover:text-white text-4xl font-bold font-mono transition">&times;</button>
     </div>
 
-    <!-- СКРИПТ УПРАВЛЕНИЯ МОДАЛЬНЫМ ОКНОМ -->
     <script>
         function openModal(imgSrc) {
             const modal = document.getElementById('image-modal');
